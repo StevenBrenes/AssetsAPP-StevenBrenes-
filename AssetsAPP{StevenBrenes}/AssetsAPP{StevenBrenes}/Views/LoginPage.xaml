@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AssetsAPP_StevenBrenes_.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="50,0,50,0" VerticalOptions="Start">
+            <Label Text="Bienvenido al administrador de activos empresarial" FontSize="Title" HorizontalTextAlignment="Center" />
+            <Label Text="Toque el boton INICIAR para comenzar a visualizar y administrar los activos." FontSize="Medium" HorizontalTextAlignment="Start" Padding="0,100,0,200"/>
+            <Button VerticalOptions="End" Text="INICIAR" Clicked="Button_Clicked" BorderRadius="50"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

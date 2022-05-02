@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AssetsAPP_StevenBrenes_.Views.AssetPage">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Padding="10,0,10,10">
+
+                <Label Text="Lista de activos"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                       FontSize="Title"/>
+
+                <Button Text="Nuevo Activo" 
+                        VerticalOptions="End" 
+                        BorderRadius="50" 
+                        Clicked="Button_Clicked"/>
+
+                <Grid Margin="10,0,10,0">
+
+                    <Label Text="Nombre" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                    <Label Text="Area" FontAttributes="Bold" Grid.Column="1" HorizontalTextAlignment="Center"/>
+                    <Label Text="Costo" FontAttributes="Bold" Grid.Column="2" HorizontalTextAlignment="End"/>
+
+                </Grid>
+
+                <ListView x:Name="LstAssets"
+                          RowHeight="140"
+                          Margin="10,0,10,0"
+                          VerticalOptions="Center">
+
+                    <ListView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <ViewCell>
+
+                                <Grid>
+
+                                    <Label Text="{Binding Name}" 
+                                           HorizontalTextAlignment="Start" HeightRequest="25"/>
+
+                                    <Label Grid.Column="1" 
+                                           Text="{Binding Area}"
+                                           HorizontalTextAlignment="Center" HeightRequest="25"/>
+
+                                    <Label Grid.Column="2" 
+                                           Text="{Binding Cost}" 
+                                           HorizontalTextAlignment="End" HeightRequest="25"/>
+
+                                </Grid>
+
+
+
+                            </ViewCell>
+
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

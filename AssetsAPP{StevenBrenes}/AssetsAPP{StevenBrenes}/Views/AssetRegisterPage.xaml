@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AssetsAPP_StevenBrenes_.Views.AssetRegisterPage"
+             xmlns:viewmodels ="clr-namespace:AssetsAPP_StevenBrenes_.ViewModels"
+             x:DataType="viewmodels:AssetViewModel">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,10">
+            
+            <Label Text="Registro de nuevo activo"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="Title"/>
+            
+            <Entry x:Name="TxtName" 
+                   Placeholder="Name" 
+                   FontSize="Large" 
+                   Text="{Binding Name}"/>
+
+            <Entry x:Name="TxtArea" 
+                   Placeholder="Area" 
+                   FontSize="Large" 
+                   Text="{Binding Area}"/>
+
+            <Entry x:Name="TxtCost" 
+                   Placeholder="Cost" 
+                   FontSize="Large" 
+                   Keyboard="Numeric" 
+                   Text="{Binding Cost}"/>
+            
+            <Button x:Name="BtnAdd" 
+                    VerticalOptions="Center" 
+                    Text="Registrar" 
+                    FontSize="Large" 
+                    BorderRadius="50" 
+                    Command="{Binding AddNewAssetCommand}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
